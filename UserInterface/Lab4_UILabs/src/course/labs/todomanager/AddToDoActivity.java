@@ -91,7 +91,8 @@ public class AddToDoActivity extends Activity {
 			public void onClick(View v) {
 
 
-
+				setResult(RESULT_CANCELED);
+				finish();
 				// TODO - Indicate result and finish
 
                 
@@ -108,9 +109,9 @@ public class AddToDoActivity extends Activity {
 
 				// TODO - Reset data to default values
 
-
-                
-                
+				mDefaultPriorityButton.toggle();
+                mDefaultStatusButton.toggle();
+                mTitleText.setText("");
                 
 				// reset date and time
 				setDefaultDateTime();
@@ -131,15 +132,15 @@ public class AddToDoActivity extends Activity {
 
 				// TODO - Get the current Priority
 				Priority priority = null;
-
+				priority = getPriority();
 				// TODO - Get the current Status
 				Status status = null;
-
+				status = getStatus();
 				// TODO - Get the current ToDoItem Title
 
 
 				String titleString = null;
-
+				titleString = getToDoTitle();
 
 				// Construct the Date string
 				String fullDate = dateString + " " + timeString;
@@ -151,7 +152,8 @@ public class AddToDoActivity extends Activity {
 
 				// TODO - return data Intent and finish
 
-
+				setResult(RESULT_OK, data);
+				finish();
 
 
             

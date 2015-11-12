@@ -20,6 +20,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import course.labs.todomanager.ToDoItem.Priority;
 import course.labs.todomanager.ToDoItem.Status;
@@ -48,6 +49,8 @@ public class ToDoManagerActivity extends ListActivity {
 
 		// TODO - Inflate footerView for footer_view.xml file
 		TextView footerView = null;
+		footerView = (TextView) getLayoutInflater().inflate(R.layout.footer_view, null);
+
 
 
 		// NOTE: You can remove this block once you've implemented the assignment
@@ -56,6 +59,7 @@ public class ToDoManagerActivity extends ListActivity {
 		}
 		// TODO - Add footerView to ListView
 
+		getListView().addFooterView(footerView);
 
 		
         
@@ -64,12 +68,13 @@ public class ToDoManagerActivity extends ListActivity {
 		footerView.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-
-
+				Intent toStart = new Intent(getBaseContext(), AddToDoActivity.class);
+				startActivityForResult(toStart, ADD_TODO_ITEM_REQUEST);
 				//TODO - Implement OnClick().
 			}
 		});
 
+		getListView().setAdapter(mAdapter);
 		// TODO - Attach the adapter to this ListActivity's ListView
 		
 	}
@@ -84,7 +89,11 @@ public class ToDoManagerActivity extends ListActivity {
 		// Create a new ToDoItem from the data Intent
 		// and then add it to the adapter
 
-
+		if(requestCode == ADD_TODO_ITEM_REQUEST && resultCode == RESULT_OK)
+		{
+			ToDoItem toAdd = new ToDoItem(data);
+			mAdapter.add(toAdd);
+		}
             
             
             
