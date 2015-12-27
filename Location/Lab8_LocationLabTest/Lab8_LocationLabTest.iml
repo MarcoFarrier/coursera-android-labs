@@ -13,9 +13,16 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 18 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="robotium-solo-5.3.19" level="project" />
+    <orderEntry type="library" name="robotium-solo-5.3.13" level="project" />
     <orderEntry type="library" name="robotium-solo-5.3.11" level="project" />
+    <orderEntry type="library" name="robotium-solo-5.3.12" level="project" />
     <orderEntry type="library" name="robotium-solo-5.3.1" level="project" />
-    <orderEntry type="module" module-name="Lab3c_FragmentsLab" />
-    <orderEntry type="module" module-name="Lab3c_FragmentsLab" />
+    <orderEntry type="library" name="robotium-solo-5.3.16" level="project" />
+    <orderEntry type="library" name="robotium-solo-5.3.14" level="project" />
+    <orderEntry type="library" name="robotium-solo-5.3.18" level="project" />
+    <orderEntry type="library" name="robotium-solo-5.3.17" level="project" />
+    <orderEntry type="library" name="robotium-solo-5.3.15" level="project" />
+    <orderEntry type="module" module-name="Lab8_LocationLab" />
   </component>
 </module>

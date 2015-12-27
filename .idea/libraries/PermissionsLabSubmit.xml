@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="PermissionsLabSubmit">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Permissions/PermissionsLabSubmit.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

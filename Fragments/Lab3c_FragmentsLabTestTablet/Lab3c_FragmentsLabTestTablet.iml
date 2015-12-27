@@ -16,5 +16,6 @@
     <orderEntry type="library" name="robotium-solo-5.3.11" level="project" />
     <orderEntry type="library" name="robotium-solo-5.3.1" level="project" />
     <orderEntry type="module" module-name="Lab3c_FragmentsLab" />
+    <orderEntry type="module" module-name="Lab3c_FragmentsLab" />
   </component>
 </module>
